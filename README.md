@@ -1,2 +1,2 @@
 # ByteBlog
-I blog website tech savvys.
+I blog website for the tech savvys.
