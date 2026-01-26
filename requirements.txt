@@ -2,3 +2,5 @@ fastapi
 uvicorn
 SQLAlchemy==1.3.24
 fastapi[standard]
+pwdlib[argon2]
+bcrypt
