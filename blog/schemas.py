@@ -1,5 +1,4 @@
 from typing import List
-
 from pydantic import BaseModel
 
 
@@ -33,3 +32,8 @@ class ShowBlog(Blog):
 
     class Config:
         from_attributes = True
+
+
+class Login(BaseModel):
+    username: str
+    password: str
