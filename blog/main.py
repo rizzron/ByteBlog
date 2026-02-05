@@ -1,8 +1,6 @@
-from typing import List
-
 from fastapi import FastAPI
 
-from . import schemas, models, hashing
+from . import models
 from .database import *
 from .routers import blog, user, authentication
 

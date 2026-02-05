@@ -15,7 +15,7 @@ def get_by_id(id: int, db: Session):
     return blog
 
 
-def creat(request, db: Session):
+def create(request, db: Session):
     new_blog = models.Blog(title=request.title, body=request.body, user_id=1)
     db.add(new_blog)
     db.commit()
@@ -28,7 +28,7 @@ def delete(id: int, db: Session):
     if not blog:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Blog with the ID {id} is not available.")
     db.commit()
-    return f'The blog with ID {id} has been created.'
+    return f'The blog with ID {id} has been deleted.'
 
 
 def update(id: int, request: schemas.Blog, db: Session):

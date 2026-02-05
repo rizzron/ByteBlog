@@ -18,7 +18,7 @@ def get_all_blog(db: Session = Depends(database.get_db), current_user: schemas.U
 
 @router.post('/', status_code=status.HTTP_201_CREATED)
 def create(request: schemas.Blog, db: Session = Depends(database.get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
-    return blog.creat(request, db)
+    return blog.create(request, db)
 
 
 @router.delete('/{id}', status_code=status.HTTP_204_NO_CONTENT)
